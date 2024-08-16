@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="encryption-container">
+        <h1>Encriptador de Texto</h1>
+        <div class="textbox-container">
+            <textarea id="textbox1" class="textbox" placeholder="Escribe aquí..."></textarea>
+            <textarea id="textbox2" class="textbox" placeholder="Resultado..." readonly></textarea>
+        </div>
+        <div class="buttons">
+            <button onclick="capturaYEncriptar()">Encriptar</button>
+            <button onclick="capturaYDesencriptar()">Desencriptar</button>
+            <button onclick="copiar()">Copiar</button>
+            <button onclick="limpiar()">Limpiar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">Creado por Leyner Duque</div>
+            <div class="social-icons">
+                <a href="https://github.com/zLeynerMC" target="_blank" aria-label="GitHub"><img src="./img/github.png" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/Leyner-Duque" target="_blank" aria-label="LinkedIn"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://instagram.com/zleynerz16" target="_blank" aria-label="Instagram"><img src="./img/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

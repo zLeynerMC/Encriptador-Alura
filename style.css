@@ -1,0 +1,252 @@
+/* Fuente principal */
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.pinimg.com/originals/8b/6a/43/8b6a4328ed08d07b68cfc8c3471c5309.gif') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.encryption-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilo del encabezado */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: bounceIn 2s ease;
+}
+
+/* Animación de rebote */
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Contenedor de los textareas */
+.textbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los textareas */
+.textbox {
+    width: 48%;
+    height: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Efecto de enfoque para textareas */
+.textbox:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.6);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Estilo de los botones */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Botones */
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    background: #333; /* Fondo oscuro para contraste */
+    transition: all 0.3s ease;
+    overflow: hidden;
+    min-width: 120px; /* Tamaño mínimo para los botones */
+}
+
+/* Colores de los botones */
+button:nth-child(1) {
+    background: #3abd3e; /* Verde */
+}
+button:nth-child(2) {
+    background: #2090ec; /* Azul */
+}
+button:nth-child(3) {
+    background: #ff9810; /* Amarillo */
+}
+button:nth-child(4) {
+    background: #ff2828; /* Rojo */
+}
+
+/* Efectos de los botones */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Animación de los botones */
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%);
+    transition: width 0.4s ease, height 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+button:hover::before {
+    width: 350%;
+    height: 350%;
+}
+
+/* Estilo del footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.493);
+    padding: 10px 20px; /* Reduce el padding para hacer el footer más delgado */
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.8); /* Línea delgada en la parte superior */
+    animation: slideUp 1s ease;
+}
+
+/* Animación del footer */
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+/* Contenido del footer */
+.footer-content {
+    display: flex;
+    flex-direction: row; /* Muestra los iconos en una fila */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el texto y los iconos */
+}
+
+/* Texto del footer */
+.footer-text {
+    font-size: 0.9rem; /* Tamaño más pequeño del texto */
+    margin: 0;
+}
+
+/* Iconos sociales */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Espacio entre iconos */
+}
+
+/* Iconos */
+.social-icons a {
+    display: inline-block;
+    width: 30px; /* Tamaño más pequeño del logo */
+    height: 30px; /* Tamaño más pequeño del logo */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 50%; /* Redondea los iconos */
+    overflow: hidden; /* Asegura que la imagen se ajuste al contenedor redondeado */
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen y recorta el contenido si es necesario */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .textbox-container {
+        flex-direction: column;
+    }
+
+    .textbox {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;  /* Añadir espacio por debajo de los botones */
+    }
+
+    button {
+        width: 100%;
+        min-width: 0; /* Elimina el tamaño mínimo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .textbox {
+        height: 120px;
+    }
+    
+    .buttons {
+        gap: 5px;
+        margin-bottom: 20px;  /* Asegúrate de que haya margen para el footer */
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-text {
+        font-size: 1rem;
+        margin-top: 20px; /* Asegúrate de que el footer no esté pegado a los botones */
+    }
+    
+    .social-icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    html, body{
+        overflow: hidden;
+    }
+}
