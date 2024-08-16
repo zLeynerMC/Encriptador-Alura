@@ -102,7 +102,7 @@ function limpiar() {
 const notyf = new Notyf({
   duration: 3500,
   position: {
-    x: 'right',
+    x: 'center',
     y: 'top',
   },
   types: [
