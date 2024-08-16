@@ -48,6 +48,7 @@ function capturaYDesencriptar() {
 function validarTexto(textbox1) {
   var mayusculas = /[A-Z]/;
   var acentos = /[áéíóúÁÉÍÓÚñÑ]/;
+  var especiales =  /[!@#$%^&*(),.?":{}|<>]/;
 
   if (mayusculas.test(textbox1)) {
       notyf.error("El texto contiene mayúsculas. Por favor, usa solo letras minúsculas.");
@@ -57,6 +58,10 @@ function validarTexto(textbox1) {
   if (acentos.test(textbox1)) {
       notyf.error("El texto contiene acentos. Por favor, usa solo letras sin acentos.");
       return false;
+  }
+  if (especiales.test(textbox1)) {
+    notyf.error("El texto contiene caracteres especiales. Por favor, usa solo letras minúsculas");
+    return false;
   }
   return true;
 }
@@ -97,7 +102,7 @@ function limpiar() {
 const notyf = new Notyf({
   duration: 3500,
   position: {
-    x: 'center',
+    x: 'right',
     y: 'top',
   },
   types: [

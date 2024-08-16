@@ -15,13 +15,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
     text-align: center;
     color: #fff;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.562);
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.671);
     animation: fadeIn 2s ease-in-out;
+    overflow: hidden;
 }
 
 /* Animación de entrada */
@@ -49,20 +51,21 @@ h1 {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    width: 100%;
+    width: auto;
     max-width: 1000px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 /* Estilo de los textareas */
 .textbox {
-    width: 48%;
+    flex: 1;
     height: 150px;
     padding: 10px;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
-    background: rgba(252, 252, 252, 0.562);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
 }
@@ -204,7 +207,7 @@ footer {
         width: 100%;
         margin-bottom: 10px;
     }
-    
+
     .buttons {
         flex-direction: column;
         gap: 10px;
@@ -221,32 +224,39 @@ footer {
     h1 {
         font-size: 2rem;
     }
-    
+
     .textbox {
         height: 120px;
     }
-    
+
     .buttons {
         gap: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
-    
+
     button {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    
+
     .footer-text {
         font-size: 1rem;
         margin-top: 20px;
     }
-    
+
     .social-icons img {
         width: 35px;
         height: 35px;
     }
 
-    html, body{
+    /* Ocultar footer en pantallas pequeñas */
+    .footer {
+        display: none;
+    }
+
+    html, body {
         overflow: hidden;
+        padding: 0;
+        margin: 0;
     }
 }
